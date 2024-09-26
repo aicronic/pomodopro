@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomodoPro</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="clock-face">
+        <div class="indicators">
+            <div id="work-indicator" class="indicator">Work</div>
+            <div id="break-indicator" class="indicator">Break</div>
+        </div>
+        <div id="timer" class="timer">25:00</div>
+        <div class="buttons">
+            <button id="start-btn" class="btn">Start</button>
+            <button id="pause-btn" class="btn">Pause</button>
+            <button id="reset-btn" class="btn">Reset</button>
+        </div>
+    </div>
+    <div class="preferences">
+        <div class="slider-container">
+            <label for="work-duration">Work Duration: <span id="work-duration-value">25</span> mins</label>
+            <input type="range" id="work-duration" min="1" max="60" value="25">
+        </div>
+        <div class="slider-container">
+            <label for="break-duration">Break Duration: <span id="break-duration-value">5</span> mins</label>
+            <input type="range" id="break-duration" min="1" max="30" value="5">
+        </div>
+        <div class="slider-container">
+            <label for="long-break-duration">Long Break Duration: <span id="long-break-duration-value">20</span> mins</label>
+            <input type="range" id="long-break-duration" min="1" max="60" value="20">
+        </div>
+    </div>
+    <div class="toggles">
+        <div class="toggle-container">
+            <label for="notifications-toggle">Notifications</label>
+            <input type="checkbox" id="notifications-toggle" class="toggle">
+        </div>
+        <div class="toggle-container">
+            <label for="sounds-toggle">Sounds</label>
+            <input type="checkbox" id="sounds-toggle" class="toggle">
+        </div>
+        <div class="toggle-container">
+            <label for="auto-start-toggle">Auto-start next session</label>
+            <input type="checkbox" id="auto-start-toggle" class="toggle" checked>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
