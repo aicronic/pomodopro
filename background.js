@@ -136,9 +136,9 @@ let timer = {
   function showNotification() {
     chrome.notifications.create({
       type: 'basic',
-      iconUrl: 'icons/icon128.png',
-      title: timer.isWorkSession ? 'Break Time!' : 'Work Time!',
-      message: timer.isWorkSession ? 'Time to take a break.' : 'Time to focus on your work.'
+      iconUrl: 'icons/clock128.png',
+      title: timer.isWorkSession ? 'Work Time!' : 'Break Time!',
+      message: timer.isWorkSession ? 'Time to focus on your work.' : 'Time to take a break.' 
     });
   }
   

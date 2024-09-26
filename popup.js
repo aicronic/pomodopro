@@ -98,3 +98,5 @@ function updateAutoStart(event) {
 
 // Update UI every second
 setInterval(loadTimerState, 1000);
+
+/*Icon attribute link: <a href="https://www.flaticon.com/free-icons/digital-alarm-clock" title="digital alarm clock icons">Digital alarm clock icons created by juicy_fish - Flaticon</a>*/

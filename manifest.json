@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "PomodoPro",
-    "version": "1.0",
+    "version": "1.2",
     "description": "A retro-styled Pomodoro timer with customizable settings",
     "permissions": ["storage", "alarms", "notifications"],
     "background": {
@@ -10,14 +10,14 @@
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
-        "16": "icons/eye-icon-bg16.png",
-        "48": "icons/eye-icon-bg48.png",
-        "128": "icons/eye-icon-bg128.png"
+        "16": "icons/clock16.png",
+        "48": "icons/clock48.png",
+        "128": "icons/clock128.png"
       }
     },
     "icons": {
-      "16": "icons/eye-icon-bg16.png",
-      "48": "icons/eye-icon-bg48.png",
-      "128": "icons/eye-icon-bg128.png"
+      "16": "icons/clock16.png",
+      "48": "icons/clock48.png",
+      "128": "icons/clock128.png"
     }
   }
