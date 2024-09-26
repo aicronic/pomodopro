@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PomodoPro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
@@ -21,30 +22,39 @@
     </div>
     <div class="preferences">
         <div class="slider-container">
-            <label for="work-duration">Work Duration: <span id="work-duration-value">25</span> mins</label>
+            <label for="work-duration">Work: <span id="work-duration-value">25</span> mins</label>
             <input type="range" id="work-duration" min="1" max="60" value="25">
         </div>
         <div class="slider-container">
-            <label for="break-duration">Break Duration: <span id="break-duration-value">5</span> mins</label>
+            <label for="break-duration">Break: <span id="break-duration-value">5</span> mins</label>
             <input type="range" id="break-duration" min="1" max="30" value="5">
         </div>
         <div class="slider-container">
-            <label for="long-break-duration">Long Break Duration: <span id="long-break-duration-value">20</span> mins</label>
+            <label for="long-break-duration">Long Break: <span id="long-break-duration-value">20</span> mins</label>
             <input type="range" id="long-break-duration" min="1" max="60" value="20">
         </div>
     </div>
     <div class="toggles">
         <div class="toggle-container">
             <label for="notifications-toggle">Notifications</label>
-            <input type="checkbox" id="notifications-toggle" class="toggle">
+            <label class="toggle">
+                <input type="checkbox" id="notifications-toggle">
+                <span class="toggle-slider"></span>
+            </label>
         </div>
         <div class="toggle-container">
             <label for="sounds-toggle">Sounds</label>
-            <input type="checkbox" id="sounds-toggle" class="toggle">
+            <label class="toggle">
+                <input type="checkbox" id="sounds-toggle">
+                <span class="toggle-slider"></span>
+            </label>
         </div>
         <div class="toggle-container">
-            <label for="auto-start-toggle">Auto-start next session</label>
-            <input type="checkbox" id="auto-start-toggle" class="toggle" checked>
+            <label for="auto-start-toggle">Auto-start next</label>
+            <label class="toggle">
+                <input type="checkbox" id="auto-start-toggle" checked>
+                <span class="toggle-slider"></span>
+            </label>
         </div>
     </div>
     <script src="popup.js"></script>

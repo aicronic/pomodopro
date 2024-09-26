@@ -121,13 +121,18 @@ let timer = {
   }
   
   function updateBadge() {
-    const minutes = Math.floor(timer.remainingTime / 60);
-    const seconds = timer.remainingTime % 60;
-    const badgeText = timer.isRunning ? `${minutes}:${seconds.toString().padStart(2, '0')}` : 'OFF';
-    chrome.action.setBadgeText({ text: badgeText });
-    chrome.action.setBadgeBackgroundColor({ color: timer.isWorkSession ? '#0000FF' : '#FFA500' });
+    if (timer.isRunning) {
+      const minutes = Math.floor(timer.remainingTime / 60);
+      const seconds = timer.remainingTime % 60;
+      const badgeText = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      chrome.action.setBadgeText({ text: badgeText });
+      chrome.action.setBadgeBackgroundColor({ color: timer.isWorkSession ? '#0000FF' : '#FFA500' });
+    } else {
+      chrome.action.setBadgeText({ text: 'OFF' });
+      chrome.action.setBadgeBackgroundColor({ color: [0, 0, 0, 0] }); // Transparent background
+    }
+    chrome.action.setBadgeTextColor({ color: '#FFFFFF' });
   }
-  
   function showNotification() {
     chrome.notifications.create({
       type: 'basic',
